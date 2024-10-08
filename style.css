@@ -14,13 +14,13 @@ nav{
   .PageName {
     font-size:4em;
     position:top;
-    color:#f5f9ff;
+    color:#fffafa;
     font-family: "Inter", sans-serif;
     text-align:center;
     justify-content:center;
     padding-top:5vh;
     padding-bottom:3vh;
-    opacity:.6;
+    opacity:.8;
   }
   * {
       margin: 0;
@@ -36,7 +36,7 @@ nav{
   
   body{
       background-color: #29a8d6;
-      background-image: url("https://static.vecteezy.com/system/resources/thumbnails/011/545/805/small_2x/abstract-luxury-glowing-lines-curved-overlapping-on-dark-blue-background-template-premium-award-design-free-vector.jpg");
+      background-image: url("https://wallpapers.com/images/featured/cool-f1-fzvtojbyn8t1sjnk.jpg");
     background-size:cover;
     background-position:center;
   }
