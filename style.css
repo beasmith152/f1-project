@@ -261,6 +261,14 @@ nav{
         height:100%;
         margin:0;
       }
+      /* Mobile Teams Table */
+      .content-table{
+        display: flex;
+        justify-content: center;  
+        overflow-y: auto;
+        height:100%;
+        position:relative;
+      }
       .icon{
         display:none;
       }
