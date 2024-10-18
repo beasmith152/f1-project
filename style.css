@@ -350,6 +350,10 @@ body{
         width:auto
       }
       
+      .teamlabel{
+        display:none;
+      }
+      
       .container{
         position:relative;
         align-items: center;
