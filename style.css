@@ -254,14 +254,10 @@ body{
     position:relative;
   }
       
-  
-  
-  
-
 /* Live Races Page */
 #page-content-live{
   position: static;
-  margin-top:5%
+  height:100%
 }
 
   embed {
@@ -320,6 +316,8 @@ body{
         left: 0;
         z-index:10;
     }
+
+    /* End of Nav Mobile */
 
 
       /* Mobile Teams Table */
@@ -459,4 +457,3 @@ body{
         margin: 0 .45vw;
     }
     }
-    
