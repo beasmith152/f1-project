@@ -1,12 +1,26 @@
-/* basic site layout for web */
-/* Menu */
+
 html,body{
- 
   height:100%;
-  width:100%;
   margin:0;
-  padding:0;
+  overflow:hidden;
 }
+body{
+    background-color: #29a8d6;
+    background-image: url("https://wallpapers.com/images/featured/cool-f1-fzvtojbyn8t1sjnk.jpg");
+ background-repeat: no-repeat;
+  background-position:center;
+  background-size: cover;
+  min-height:100vh;
+  z-index:1;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Menu for Navigation */
+
 .nav{ 
   justify-content: center;
   width:100%;
@@ -33,11 +47,7 @@ html,body{
   padding: 2em;
 }
 
-  embed {
-    width: 100%;
-    height: 100%;
-    border: none; /* Remove border if any */
-}
+  
   .navlink img{
     width:3em;
     height:auto;
@@ -46,28 +56,6 @@ html,body{
     margin:0;
     padding:0;
 }
- /*
-  .nav-links{
-    display:flex;
-    justify-content:center;
-    margin-bottom: .5em;
-    position: fixed;
-    z-index: 999;
-    width: 100%;
-    flex-direction: row;
-    text-decoration: uppercase;
-  }
-
-  .nav-links a {
-    font-size:1em;
-    font-family: "Inter", sans-serif;
-    text-align:center;
-    display: flex;
-  align-items: center;
-  flex-direction: row;
-  z-index: 12;
-  }
-   */
   .nav-links a:hover{
     color:#fc353f;
   }
@@ -83,6 +71,8 @@ html,body{
 
 /* End of Nav */
 
+/* Meet the Drivers/home */
+
   .PageName {
     font-size:4em;
     position:top;
@@ -94,11 +84,119 @@ html,body{
     padding-bottom:3vh;
     opacity:.8;
   }
-  * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-  }
+  
+  .wrapper{
+    align-items: center;
+    height: 100%;
+  margin:0vh;
+  bottom:50vh;
+}
+#page-content{
+  position: static;
+  margin-top:10%
+}
+
+.items{
+    display: flex;
+    gap: 0.2rem;
+    perspective: calc(var(--index) * 35);
+  justify-content: center;
+}
+
+.item{
+    width: calc(var(--index) * 3);
+    height: calc(var(--index) * 12);
+    background-color: #222;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    filter: grayscale(1) brightness(.5);
+    transition: transform 1.25s var(--transition), filter 3s var(--transition), width 1.25s var(--transition);
+    will-change: transform, filter, rotateY, width;
+  
+}
+
+.item::before, .item::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 20px;
+  right: calc(var(--index) * -2);
+  z-index: -1; /* Ensure pseudo-elements are behind the image */
+}
+
+.item::after {
+  left: calc(var(--index) * -2);
+}
+
+.items .item:hover {
+  filter: inherit;
+  transform: translateZ(calc(var(--index) * 10));
+}
+
+/*Right*/
+
+.items .item:hover + *{
+    filter: inherit;
+    transform: translateZ(calc(var(--index) * 8.5)) rotateY(35deg);
+    z-index: -1;
+}
+
+.items .item:hover + * + *{
+    filter: inherit;
+    transform: translateZ(calc(var(--index) * 5.6)) rotateY(40deg);
+    z-index: -2;
+}
+
+.items .item:hover + * + * + *{
+    filter: inherit;
+    transform: translateZ(calc(var(--index) * 2.5)) rotateY(30deg);
+    z-index: -3;
+}
+
+.items .item:hover + * + * + * + *{
+    filter: inherit;
+    transform: translateZ(calc(var(--index) * .6)) rotateY(15deg);
+    z-index: -4;
+}
+
+
+/*Left*/
+
+.items .item:has( + :hover){
+    filter: inherit;
+    transform: translateZ(calc(var(--index) * 8.5)) rotateY(-50deg);
+}
+
+.items .item:has( + * + :hover){
+    filter: inherit;
+    transform: translateZ(calc(var(--index) * 5.6)) rotateY(-40deg);
+}
+
+.items .item:has( + * + * + :hover){
+    filter: inherit;
+    transform: translateZ(calc(var(--index) * 2.5)) rotateY(-30deg);
+}
+
+.items .item:has( + * + * + * + :hover){
+    filter: inherit;
+    transform: translateZ(calc(var(--index) * .6)) rotateY(-15deg);
+}
+
+.items .item:active, .items .item:focus {
+    width: 28vw;
+    filter: inherit;
+    z-index: 100;
+    transform: translateZ(calc(var(--index) * 10));
+    margin: 0 .45vw;
+}
+/* fonts 
+.hind-regular {
+  font-family: "Hind", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+*/
 
 
   /* Teams Page Table */
@@ -151,140 +249,26 @@ html,body{
       --index: calc(1vw + 1vh);
       --transition: cubic-bezier(.1, .7, 0, 1);
   }
-  html,body{
-    height:100%;
-    margin:0;
-    overflow:hidden;
-  }
-  body{
-      background-color: #29a8d6;
-      background-image: url("https://wallpapers.com/images/featured/cool-f1-fzvtojbyn8t1sjnk.jpg");
-   background-repeat: no-repeat;
-    background-position:center;
-    background-size: cover;
-    min-height:100vh;
-    z-index:1;
-  }
+  
   .container{
     position:relative;
   }
       
   
-  .wrapper{
-      align-items: center;
-      height: 100%;
-    margin:0vh;
-    bottom:50vh;
-  }
   
-  .hind-regular {
-    font-family: "Hind", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
+  
 
-  #page-content{
-    position: static;
-    margin-top:10%
-  }
-  #page-content-live{
-    position: static;
-    margin-top:5%
-  }
-  .items{
-      display: flex;
-      gap: 0.2rem;
-      perspective: calc(var(--index) * 35);
-    justify-content: center;
-  }
-  
-  .item{
-      width: calc(var(--index) * 3);
-      height: calc(var(--index) * 12);
-      background-color: #222;
-      background-size: cover;
-      background-position: center;
-      cursor: pointer;
-      filter: grayscale(1) brightness(.5);
-      transition: transform 1.25s var(--transition), filter 3s var(--transition), width 1.25s var(--transition);
-      will-change: transform, filter, rotateY, width;
-    
-  }
-  
-  .item::before, .item::after {
-    content: '';
-    position: absolute;
+/* Live Races Page */
+#page-content-live{
+  position: static;
+  margin-top:5%
+}
+
+  embed {
+    width: 100%;
     height: 100%;
-    width: 20px;
-    right: calc(var(--index) * -2);
-    z-index: -1; /* Ensure pseudo-elements are behind the image */
+    border: none; /* Remove border if any */
 }
-
-.item::after {
-    left: calc(var(--index) * -2);
-}
-
-.items .item:hover {
-    filter: inherit;
-    transform: translateZ(calc(var(--index) * 10));
-}
-  
-  /*Right*/
-  
-  .items .item:hover + *{
-      filter: inherit;
-      transform: translateZ(calc(var(--index) * 8.5)) rotateY(35deg);
-      z-index: -1;
-  }
-  
-  .items .item:hover + * + *{
-      filter: inherit;
-      transform: translateZ(calc(var(--index) * 5.6)) rotateY(40deg);
-      z-index: -2;
-  }
-  
-  .items .item:hover + * + * + *{
-      filter: inherit;
-      transform: translateZ(calc(var(--index) * 2.5)) rotateY(30deg);
-      z-index: -3;
-  }
-  
-  .items .item:hover + * + * + * + *{
-      filter: inherit;
-      transform: translateZ(calc(var(--index) * .6)) rotateY(15deg);
-      z-index: -4;
-  }
-  
-  
-  /*Left*/
-  
-  .items .item:has( + :hover){
-      filter: inherit;
-      transform: translateZ(calc(var(--index) * 8.5)) rotateY(-50deg);
-  }
-  
-  .items .item:has( + * + :hover){
-      filter: inherit;
-      transform: translateZ(calc(var(--index) * 5.6)) rotateY(-40deg);
-  }
-  
-  .items .item:has( + * + * + :hover){
-      filter: inherit;
-      transform: translateZ(calc(var(--index) * 2.5)) rotateY(-30deg);
-  }
-  
-  .items .item:has( + * + * + * + :hover){
-      filter: inherit;
-      transform: translateZ(calc(var(--index) * .6)) rotateY(-15deg);
-  }
-  
-  .items .item:active, .items .item:focus {
-      width: 28vw;
-      filter: inherit;
-      z-index: 100;
-      transform: translateZ(calc(var(--index) * 10));
-      margin: 0 .45vw;
-  }
 
     /* Phone sizing */
     @media (max-width:780px){
@@ -293,21 +277,27 @@ html,body{
         height:100%;
         margin:0;
       }
+
+      /* Mobile Menu */
+
       .nav{
         flex-direction: column;
             height: auto;
             position: relative;
+            z-index: 10;
             
       }
       .nav a{
         padding:1em;
-        margin-top:1em;
         text-align: center;
+      
       }
       .hamburger {
         display: block;
        z-index: 13;
-       margin-top:-2em;
+       margin:0;
+       padding-bottom:1em;
+       
       }
 
       .navlink img{
@@ -315,8 +305,8 @@ html,body{
         height:auto;
         justify-content: center;
         align-items: center;
-        margin-bottom:-2em;
         padding:0;
+        margin:0;
         display: flex;
     }
 
@@ -326,12 +316,11 @@ html,body{
         width: 100%;
         background-color: black;
         position: absolute;
-        top: 5em;
+        top: 7em;
         left: 0;
+        z-index:10;
     }
-  
-      
-  
+
 
       /* Mobile Teams Table */
       .content-table{
@@ -341,9 +330,7 @@ html,body{
         height:100%;
         position:relative;
       }
-      .icon{
-        display:none;
-      }
+      
       .container{
         position:relative;
         align-items: center;
@@ -358,7 +345,22 @@ html,body{
         bottom:50vh;
         
       }
+
+      /* Meet the Drivers Mobile */
       /* scroll function */
+      .PageName {
+        font-size:4em;
+        position:relative;
+        color:#fffafa;
+        font-family: "Inter", sans-serif;
+        text-align:center;
+        justify-content:center;
+        padding-top:5vh;
+        padding-bottom:3vh;
+        opacity:.8;
+        z-index: 5;
+      }
+
       .items{
         overflow-y: auto;
         display: flex;
@@ -457,3 +459,4 @@ html,body{
         margin: 0 .45vw;
     }
     }
+    
