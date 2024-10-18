@@ -326,6 +326,14 @@ body{
 
     /* End of Nav Mobile */
 
+    /* Live races mobile */
+
+    #page-content-live{
+      position: absolute;
+      height:100%;
+      width:100%;
+      margin-top:0em;
+    }
 
       /* Mobile Teams Table */
       #page-content-teams{
