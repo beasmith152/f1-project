@@ -50,14 +50,12 @@ html,body{
   .nav-links{
     display:flex;
     justify-content:center;
-    align-items:left;
+    margin-bottom: .5em;
     position: fixed;
-    top: 5vh;
-    left: 0;
     z-index: 999;
     width: 100%;
     flex-direction: row;
-    
+    text-decoration: uppercase;
   }
 
 .navlink{
@@ -65,7 +63,6 @@ html,body{
   align-items: center;
   text-align: center;
   color:white;
-  text-decoration:uppercase;
   margin-right:4em;
   height: 3em;
 
