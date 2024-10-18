@@ -49,7 +49,7 @@ html,body{
 
   .nav-links{
     display:flex;
-    justify-content:space-evenly;
+    justify-content:center;
     align-items:left;
     position: fixed;
     top: 5vh;
