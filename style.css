@@ -69,8 +69,6 @@ html,body{
 }
   .nav-links a {
     font-size:1em;
-    position:top;
-    color:#fffafa;
     font-family: "Inter", sans-serif;
     text-align:center;
   }
