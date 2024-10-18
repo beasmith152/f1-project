@@ -9,21 +9,24 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
+
+<script src="script.js" defer></script>
+
     <title>F1 Teams</title>
 </head>
 <body>
-<nav class="nav">
-
-    <a href="index.html">
- <img class="icon" src="https://cdn-icons-png.flaticon.com/256/2418/2418779.png"  alt="">
-</a>
-<div class="nav-links">
-    <a href="teams.html">Teams</a>
-    <a href="Liveraces.html">Live races</a>
-    <a href="News.html">News</a>
-    <a href="https://www.formula1.com/">Formula 1</a>
+    <div class="nav">
+        <a href="index.html" class="navlink">
+     <img class="icon" src="https://cdn-icons-png.flaticon.com/256/2418/2418779.png"  alt="">
+    </a>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <div class="nav-links">
+        <a href="teams.html" class="navlink">Teams</a>
+        <a href="Liveraces.html" class="navlink">Live races</a>
+        <a href="News.html" class="navlink">News</a>
+        <a href="https://www.formula1.com/" class="navlink">Formula 1</a>
+    </div>
 </div>
-</nav>
 <div id="page-content-teams">
     <table class="content-table">
         <tbody>
