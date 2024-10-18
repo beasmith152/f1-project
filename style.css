@@ -346,6 +346,9 @@ body{
         width:auto;
         
       }
+      tbody{
+        width:auto
+      }
       
       .container{
         position:relative;
