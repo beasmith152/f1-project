@@ -264,6 +264,7 @@ body{
   position: absolute;
   height:100%;
   width:100%;
+  margin-top:5em;
 }
 
   embed {
@@ -353,7 +354,7 @@ body{
       .teamlabel{
         display:none;
       }
-      
+
       .container{
         position:relative;
         align-items: center;
