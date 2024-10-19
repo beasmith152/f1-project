@@ -429,29 +429,4 @@ body{
         z-index: 5;
       }
 
-      .items{
-        overflow-y: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height:auto;
-        width:auto;
-        align-items: center;
-        transition:none ;
-        transform:none;
-      }
-      .item{
-        width:25em;
-        background-color: #222;
-        background-position: center;
-        cursor: pointer;
-        filter: grayscale(1) brightness(.5);
-        transition: none ;
-        transform:none;
-        margin-left:1em;
-      }
-      .item:after{
-        width:30em;
-        transform:none;
-        transition:none;
-      }
+      
