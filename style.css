@@ -520,6 +520,5 @@ body{
         filter: inherit;
         z-index: 100;
         transform: translateZ(calc(var(--index) * 10));
-        margin: 1.2vw;
     }
     }
