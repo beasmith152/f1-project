@@ -435,7 +435,7 @@ body{
     .items{
         display: flex;
         gap: 0.2rem;
-        perspective: calc(var(--index) * 65);
+        perspective: calc(var(--index) * 85);
       justify-content: center;
       padding-left:2em;
       padding-right: 2em;
@@ -444,7 +444,7 @@ body{
     
     .item{
         width: calc(var(--index) * 21);
-        height: calc(var(--index) * 30);
+        height: calc(var(--index) * 40);
         background-color: #222;
         background-size: cover;
         background-position: center;
