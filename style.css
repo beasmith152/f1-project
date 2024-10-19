@@ -451,4 +451,6 @@ body{
       }
       .item::after{
         width:30em;
+        transform:none;
+        transition:none;
       }
