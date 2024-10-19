@@ -421,9 +421,8 @@ body{
       .wrapper{
         align-items: center;
         height: 100%;
-     margin-left:5em;
       bottom:50vh;
-      width:90%;
+      width:100%;
     
     }
     #page-content{
