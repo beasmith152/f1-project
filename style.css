@@ -436,6 +436,7 @@ body{
         height:auto;
         width:auto;
         align-items: center;
+        transition:none;
       }
       .item{
         width:25em;
@@ -448,6 +449,3 @@ body{
       
     }
     
-    .item.clicked {
-      transform: scale(1.5); /* Scale up more on mobile */
-    }
