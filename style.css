@@ -437,7 +437,7 @@ body{
         height:auto;
         width:auto;
         align-items: center;
-        transition:none !important;
+        transition:none ;
       }
       .item{
         width:25em;
@@ -445,8 +445,55 @@ body{
         background-position: center;
         cursor: pointer;
         filter: grayscale(1) brightness(.5);
-        transition: none !important;
+        transition: none ;
         
       
+    }
+    .item::after {
+      transition:none;
+    }
+    
+    .items .item:hover {
+      transition:none;
+    }
+    
+    /*Right*/
+    
+    .items .item:hover + *{
+      transition:none;
+    }
+    
+    .items .item:hover + * + *{
+      transition:none;
+    }
+    
+    .items .item:hover + * + * + *{
+      transition:none;
+    
+    .items .item:hover + * + * + * + *{
+      transition:none;
+    }
+    
+    
+    /*Left*/
+    
+    .items .item:has( + :hover){
+      transition:none;
+    }
+    
+    .items .item:has( + * + :hover){
+      transition:none;
+    }
+    
+    .items .item:has( + * + * + :hover){
+      transition:none;
+    }
+    
+    .items .item:has( + * + * + * + :hover){
+      transition:none;
+    }
+    
+    .items .item:active, .items .item:focus {
+      transition:none;
     }
     
