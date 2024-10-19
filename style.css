@@ -438,9 +438,7 @@ body{
         align-items: center;
       }
       .item{
-        min-width: 25%;
         min-height: 55%;
-        width: calc(var(--index) * 6);
         height: calc(var(--index) * 20);
         background-color: #222;
         background-position: center;
