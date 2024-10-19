@@ -438,6 +438,7 @@ body{
         align-items: center;
       }
       .item{
+        width:25em;
         background-color: #222;
         background-position: center;
         cursor: pointer;
@@ -519,6 +520,6 @@ body{
         filter: inherit;
         z-index: 100;
         transform: translateZ(calc(var(--index) * 10));
-        margin: 0 .45vw;
+        margin: 0 .15vw;
     }
     }
