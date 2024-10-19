@@ -455,7 +455,7 @@ body{
       
     }
     .item.clicked {
-      width: calc(var(--index) * 12); /* Increase width when clicked */
+      width: calc(var(--index) * 100); /* Increase width when clicked */
     }
     
     .item::before, .item::after {
