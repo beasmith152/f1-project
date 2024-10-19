@@ -452,12 +452,10 @@ body{
       content: '';
       position: absolute;
       height: 100%;
-      right: calc(var(--index) * -2);
       z-index: -1; /* Ensure pseudo-elements are behind the image */
   }
   
   .item::after {
-      left: calc(var(--index) * -2);
   }
   
   .items .item:hover {
