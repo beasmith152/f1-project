@@ -438,6 +438,7 @@ body{
         width:auto;
         align-items: center;
         transition:none ;
+        transform:none;
       }
       .item{
         width:25em;
@@ -446,32 +447,39 @@ body{
         cursor: pointer;
         filter: grayscale(1) brightness(.5);
         transition: none ;
+        transform:none;
         
       
     }
     .item::after {
       transition:none;
+      transform:none;
     }
     
     .items .item:hover {
       transition:none;
+      transform:none;
     }
     
     /*Right*/
     
     .items .item:hover + *{
       transition:none;
+      transform:none;
     }
     
     .items .item:hover + * + *{
       transition:none;
+      transform:none;
     }
     
     .items .item:hover + * + * + *{
       transition:none;
+      transform:none;
     
     .items .item:hover + * + * + * + *{
       transition:none;
+      transform:none;
     }
     
     
@@ -479,21 +487,26 @@ body{
     
     .items .item:has( + :hover){
       transition:none;
+      transform:none;
     }
     
     .items .item:has( + * + :hover){
       transition:none;
+      transform:none;
     }
     
     .items .item:has( + * + * + :hover){
       transition:none;
+      transform:none;
     }
     
     .items .item:has( + * + * + * + :hover){
       transition:none;
+      transform:none;
     }
     
     .items .item:active, .items .item:focus {
       transition:none;
+      transform:none;
     }
     
