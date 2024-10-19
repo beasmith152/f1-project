@@ -449,3 +449,6 @@ body{
         transition: none ;
         transform:none;
       }
+      .item::after{
+        width:30em;
+      }
