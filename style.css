@@ -416,17 +416,157 @@ body{
 
       /* Meet the Drivers Mobile */
       /* scroll function */
-      .PageName {
-        font-size:4em;
-        position:relative;
-        color:#fffafa;
-        font-family: "Inter", sans-serif;
-        text-align:center;
-        justify-content:center;
-        padding-top:5vh;
-        padding-bottom:3vh;
-        opacity:.8;
-        z-index: 5;
-      }
+  
 
+      .wrapper{
+        align-items: center;
+        height: 100%;
+     margin-left:5em;
+      bottom:50vh;
+      width:90%;
+    
+    }
+    #page-content{
+      position: static;
+      margin-top:5em;
+    }
+    
+    .items{
+        display: flex;
+        gap: 0.2rem;
+        perspective: calc(var(--index) * 65);
+      justify-content: center;
+      padding-left:2em;
+      padding-right: 2em;
       
+    }
+    
+    .item{
+        width: calc(var(--index) * 9);
+        height: calc(var(--index) * 30);
+        background-color: #222;
+        background-size: cover;
+        background-position: center;
+        cursor: pointer;
+        filter: grayscale(1) brightness(.5);
+        transition: transform 1.25s var(--transition), filter 3s var(--transition), width 1.25s var(--transition);
+        will-change: transform, filter, rotateY, width;
+      
+    }
+    
+    .item::before, .item::after {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 20px;
+      right: calc(var(--index) * .5);
+      z-index: -1; /* Ensure pseudo-elements are behind the image */
+    }
+    
+    /* Overlay on item */
+    
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+      color: white;
+      display: flex;
+      flex-direction: column; /* Stack items vertically */
+      justify-content: center; /* Center items vertically */
+      align-items: center; /* Center items horizontally */
+      opacity: 0; /* Initially hidden */
+      transition: opacity 0.3s ease; /* Smooth transition */
+      z-index: 2; /* Ensure the overlay is on top of the image */
+      font-family: "Audiowide", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+     
+    }
+    
+    .item.clicked .overlay {
+      opacity: 1; /* Show the overlay when the item is clicked */
+    }
+    
+    .overlay-text {
+      margin-bottom: 10px; /* Space between the text and the link */
+    }
+    
+    .driver-link {
+      color: white; /* Link color */
+      text-decoration: none; /* Remove underline */
+      z-index: 2; /* Ensure the link is above the image */
+      text-align: center;
+    }
+    
+    .driver-link:hover {
+      color:#ff0303;
+    }
+    
+    .item::after {
+      left: calc(var(--index) * .5);
+    }
+    
+    .items .item:hover {
+      filter: inherit;
+      transform: translateZ(calc(var(--index) * 8));
+    }
+    
+    /*Right*/
+    
+    .items .item:hover + *{
+        filter: inherit;
+        transform: translateZ(calc(var(--index) * 6)) rotateY(35deg);
+        z-index: -1;
+    }
+    
+    .items .item:hover + * + *{
+        filter: inherit;
+        transform: translateZ(calc(var(--index) * 4)) rotateY(40deg);
+        z-index: -2;
+    }
+    
+    .items .item:hover + * + * + *{
+        filter: inherit;
+        transform: translateZ(calc(var(--index) * 2)) rotateY(30deg);
+        z-index: -3;
+    }
+    
+    .items .item:hover + * + * + * + *{
+        filter: inherit;
+        transform: translateZ(calc(var(--index) * .6)) rotateY(15deg);
+        z-index: -4;
+    }
+    
+    
+    /*Left*/
+    
+    .items .item:has( + :hover){
+        filter: inherit;
+        transform: translateZ(calc(var(--index) * 6)) rotateY(-50deg);
+    }
+    
+    .items .item:has( + * + :hover){
+        filter: inherit;
+        transform: translateZ(calc(var(--index) * 4)) rotateY(-40deg);
+    }
+    
+    .items .item:has( + * + * + :hover){
+        filter: inherit;
+        transform: translateZ(calc(var(--index) * 2)) rotateY(-30deg);
+    }
+    
+    .items .item:has( + * + * + * + :hover){
+        filter: inherit;
+        transform: translateZ(calc(var(--index) * .6)) rotateY(-15deg);
+    }
+    
+    .items .item:active, .items .item:focus {
+        width: 28vw;
+        filter: inherit;
+        z-index: 100;
+        transform: translateZ(calc(var(--index) * 10));
+        margin: 0 .05vw;
+    }
