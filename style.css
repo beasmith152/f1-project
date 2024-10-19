@@ -438,8 +438,6 @@ body{
         align-items: center;
       }
       .item{
-        min-height: 55%;
-        height: calc(var(--index) * 20);
         background-color: #222;
         background-position: center;
         cursor: pointer;
