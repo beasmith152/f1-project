@@ -454,6 +454,9 @@ body{
         will-change: transform, filter, rotateY, width;
       
     }
+    .item.clicked {
+      width: calc(var(--index) * 12); /* Increase width when clicked */
+    }
     
     .item::before, .item::after {
       content: '';
@@ -462,6 +465,7 @@ body{
       width: 20px;
       right: calc(var(--index) * .5);
       z-index: -1; /* Ensure pseudo-elements are behind the image */
+
     }
     
     /* Overlay on item */
