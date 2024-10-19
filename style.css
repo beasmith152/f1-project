@@ -99,6 +99,7 @@ body{
   justify-content: center;
   padding-left:2em;
   padding-right: 2em;
+  
 }
 
 .item{
@@ -436,7 +437,7 @@ body{
         height:auto;
         width:auto;
         align-items: center;
-        transition:none;
+        transition:none !important;
       }
       .item{
         width:25em;
@@ -444,7 +445,7 @@ body{
         background-position: center;
         cursor: pointer;
         filter: grayscale(1) brightness(.5);
-        transition: none;
+        transition: none !important;
         
       
     }
