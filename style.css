@@ -443,8 +443,7 @@ body{
         background-position: center;
         cursor: pointer;
         filter: grayscale(1) brightness(.5);
-        transition: transform 1.25s var(--transition), filter 3s var(--transition), width 1.25s var(--transition);
-        will-change: transform, filter, width;
+        
       
     }
     
