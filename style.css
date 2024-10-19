@@ -315,6 +315,7 @@ body{
         overflow-y:auto;
         height:100%;
         margin:0;
+        width: 100%;
       }
 
       /* Mobile Menu */
