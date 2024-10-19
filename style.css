@@ -443,7 +443,7 @@ body{
     }
     
     .item{
-        
+        width:5em;
         height: calc(var(--index) * 40);
         background-color: #222;
         background-size: cover;
