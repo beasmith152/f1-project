@@ -449,7 +449,7 @@ body{
         transition: none ;
         transform:none;
       }
-      .item::after{
+      .item:after{
         width:30em;
         transform:none;
         transition:none;
