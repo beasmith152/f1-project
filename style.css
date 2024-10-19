@@ -78,39 +78,32 @@ body{
 
 /* Meet the Drivers/home */
 
-  .PageName {
-    font-size:4em;
-    position:top;
-    color:#fffafa;
-    font-family: "Inter", sans-serif;
-    text-align:center;
-    justify-content:center;
-    padding-top:5vh;
-    padding-bottom:3vh;
-    opacity:.8;
-  }
   
   .wrapper{
     align-items: center;
     height: 100%;
-  margin:0vh;
+ margin-left:5em;
   bottom:50vh;
+  width:90%;
+
 }
 #page-content{
   position: static;
-  margin-top:10%
+  margin-top:6em;
 }
 
 .items{
     display: flex;
     gap: 0.2rem;
-    perspective: calc(var(--index) * 35);
+    perspective: calc(var(--index) * 65);
   justify-content: center;
+  padding-left:2em;
+  padding-right: 2em;
 }
 
 .item{
-    width: calc(var(--index) * 3);
-    height: calc(var(--index) * 12);
+    width: calc(var(--index) * 9);
+    height: calc(var(--index) * 30);
     background-color: #222;
     background-size: cover;
     background-position: center;
@@ -126,36 +119,36 @@ body{
   position: absolute;
   height: 100%;
   width: 20px;
-  right: calc(var(--index) * -2);
+  right: calc(var(--index) * .5);
   z-index: -1; /* Ensure pseudo-elements are behind the image */
 }
 
 .item::after {
-  left: calc(var(--index) * -2);
+  left: calc(var(--index) * .5);
 }
 
 .items .item:hover {
   filter: inherit;
-  transform: translateZ(calc(var(--index) * 10));
+  transform: translateZ(calc(var(--index) * 8));
 }
 
 /*Right*/
 
 .items .item:hover + *{
     filter: inherit;
-    transform: translateZ(calc(var(--index) * 8.5)) rotateY(35deg);
+    transform: translateZ(calc(var(--index) * 6)) rotateY(35deg);
     z-index: -1;
 }
 
 .items .item:hover + * + *{
     filter: inherit;
-    transform: translateZ(calc(var(--index) * 5.6)) rotateY(40deg);
+    transform: translateZ(calc(var(--index) * 4)) rotateY(40deg);
     z-index: -2;
 }
 
 .items .item:hover + * + * + *{
     filter: inherit;
-    transform: translateZ(calc(var(--index) * 2.5)) rotateY(30deg);
+    transform: translateZ(calc(var(--index) * 2)) rotateY(30deg);
     z-index: -3;
 }
 
@@ -170,17 +163,17 @@ body{
 
 .items .item:has( + :hover){
     filter: inherit;
-    transform: translateZ(calc(var(--index) * 8.5)) rotateY(-50deg);
+    transform: translateZ(calc(var(--index) * 6)) rotateY(-50deg);
 }
 
 .items .item:has( + * + :hover){
     filter: inherit;
-    transform: translateZ(calc(var(--index) * 5.6)) rotateY(-40deg);
+    transform: translateZ(calc(var(--index) * 4)) rotateY(-40deg);
 }
 
 .items .item:has( + * + * + :hover){
     filter: inherit;
-    transform: translateZ(calc(var(--index) * 2.5)) rotateY(-30deg);
+    transform: translateZ(calc(var(--index) * 2)) rotateY(-30deg);
 }
 
 .items .item:has( + * + * + * + :hover){
@@ -193,7 +186,7 @@ body{
     filter: inherit;
     z-index: 100;
     transform: translateZ(calc(var(--index) * 10));
-    margin: 0 .45vw;
+    margin: 0 .05vw;
 }
 /* fonts 
 .hind-regular {
