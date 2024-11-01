@@ -35,3 +35,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  document.addEventListener('DOMContentLoaded', () => {
+    const images = document.querySelectorAll('table img'); // Adjust the selector to match your table images
+
+    images.forEach(img => {
+        img.addEventListener('click', (event) => {
+            event.preventDefault();
+            const link = img.parentElement.href; // Assuming the image is inside an anchor tag
+            img.classList.add('slide-out');
+
+            img.addEventListener('animationend', () => {
+                window.location.href = link;
+            }, { once: true });
+        });
+    });
+});

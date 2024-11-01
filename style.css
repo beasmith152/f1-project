@@ -241,6 +241,19 @@ body{
 
 
   /* Teams Page Table */
+  @keyframes slideOut {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(170%);
+    }
+}
+
+.slide-out {
+    animation: slideOut 1s forwards;
+}
+
   #page-content-teams{
     display: flex;
     justify-content: center;
