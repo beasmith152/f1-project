@@ -681,7 +681,7 @@ body{
     
     
     .card {
-      margin-left:3em;
+      margin-left:1.5em;
       width: var(--card-width);
       height: var(--card-height);
       padding: 3px;
