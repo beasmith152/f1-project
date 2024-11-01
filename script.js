@@ -1,3 +1,10 @@
+// Refresh Function
+document.addEventListener('visibilitychange', function() {
+  if (document.visibilityState === 'visible') {
+      location.reload();
+  }
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile Menu
     function toggleMenu() {
@@ -65,7 +72,7 @@ function plusSlides(n) {
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
-
+// Slideshow for Mobile
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
