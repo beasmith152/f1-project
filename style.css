@@ -272,7 +272,7 @@ body{
       font-size: 1em;
       text-align: left;
       position:relative;
-      margin-top:18em;
+      margin-top:19em;
       z-index: 5;
   }
 
@@ -289,8 +289,11 @@ body{
 
 .content-table tbody tr {
     background-color:#f1f1f1;
-    font-family: "Inter", sans-serif;
-    font-size:1.5em;
+    font-family: "Audiowide", serif;
+  font-weight: 400;
+  font-style: normal;
+    font-size:1.8em;
+    color:rgb(73, 1, 1);
     text-align: center;
 }
 
