@@ -310,6 +310,14 @@ body{
   .container{
     position:relative;
   }
+
+  .location{
+    font-family: "Chathura", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-size:1.2em;
+  color:#040027;
+  }
       
 /* Live Races Page */
 #page-content-live{
