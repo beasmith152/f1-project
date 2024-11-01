@@ -424,9 +424,9 @@ body{
     @media (max-width:780px){
       html,body{
         overflow-y:auto;
-        height:100dvh;
+        height:110dvh;
         margin:0;
-        width: 100dvh;
+        width: 100%;
         position: absolute;
       }
 
