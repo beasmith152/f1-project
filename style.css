@@ -124,6 +124,7 @@ body{
   z-index: -1; /* Ensure pseudo-elements are behind the image */
 }
 
+
 /* Overlay on item */
 
 .overlay {
@@ -449,9 +450,9 @@ body{
       bottom:50vh;
       width:80%;
       margin-left:2em;
-
-    
+      display:none;
     }
+
     #page-content{
       position: static;
       margin-top:2em;
@@ -466,6 +467,8 @@ body{
       padding-right: 2em;
       
     }
+
+    
     
     .item{
         width:5em;
